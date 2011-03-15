@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question: MyString
+  choices: MyText
+  answers: MyText
+
+two:
+  question: MyString
+  choices: MyText
+  answers: MyText

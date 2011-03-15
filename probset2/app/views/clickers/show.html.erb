@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @clicker.question %>
+</p>
+
+<p>
+  <b>Choices:</b>
+  <%= @clicker.choices %>
+</p>
+
+<p>
+  <b>Answers:</b>
+  <%= @clicker.answers %>
+</p>
+
+
+<%= link_to 'Edit', edit_clicker_path(@clicker) %> |
+<%= link_to 'Back', clickers_path %>

@@ -1,0 +1,27 @@
+<h1>Listing clickers</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Choices</th>
+    <th>Answers</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clickers.each do |clicker| %>
+  <tr>
+    <td><%= clicker.question %></td>
+    <td><%= clicker.choices %></td>
+    <td><%= clicker.answers %></td>
+    <td><%= link_to 'Show', clicker %></td>
+    <td><%= link_to 'Edit', edit_clicker_path(clicker) %></td>
+    <td><%= link_to 'Destroy', clicker, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clicker', new_clicker_path %>

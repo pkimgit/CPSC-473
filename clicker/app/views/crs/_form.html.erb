@@ -1,0 +1,29 @@
+<%= form_for(@cr) do |f| %>
+  <% if @cr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cr.errors.count, "error") %> prohibited this cr from being saved:</h2>
+
+      <ul>
+      <% @cr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %><br />
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :choices %><br />
+    <%= f.text_area :choices %>
+  </div>
+  <div class="field">
+    <%= f.label :answers %><br />
+    <%= f.text_area :answers %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

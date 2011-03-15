@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @cr.question %>
+</p>
+
+<p>
+  <b>Choices:</b>
+  <%= @cr.choices %>
+</p>
+
+<p>
+  <b>Answers:</b>
+  <%= @cr.answers %>
+</p>
+
+
+<%= link_to 'Edit', edit_cr_path(@cr) %> |
+<%= link_to 'Back', cr_index_path %>

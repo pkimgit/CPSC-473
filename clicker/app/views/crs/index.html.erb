@@ -1,0 +1,27 @@
+<h1>Listing crs</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Choices</th>
+    <th>Answers</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crs.each do |cr| %>
+  <tr>
+    <td><%= cr.question %></td>
+    <td><%= cr.choices %></td>
+    <td><%= cr.answers %></td>
+    <td><%= link_to 'Show', cr %></td>
+    <td><%= link_to 'Edit', edit_cr_path(cr) %></td>
+    <td><%= link_to 'Destroy', cr, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crs', new_cr_path %>
